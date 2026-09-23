@@ -3,7 +3,7 @@
 /* Mantém a imagem de fundo e posiciona a apresentação da página inicial. */
 .banner {
   height: 500px;
-  background-image: url("https://www.folhadelondrina.com.br/img/Artigo-Destaque/3160000/Cornelio-Procopio-se-consolida-como-polo-regional-0316522800202202150851.jpg?xid=5674750");
+  background-image: url("../pagina-principal.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
