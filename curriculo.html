@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum CPM</title>
+  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/site-chrome.css">
+  <link rel="stylesheet" href="css/curriculo.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+  <body class="pagina-padrao">
+    <header>
+      <nav aria-label="Navegação principal">
+        <div class="logo">
+          <img src="logo3cpm.png" alt="Logo do 3º CPM">
+          <p>Curriculum CPM</p>
+        </div>
+
+        <div class="menu">
+          <a href="index.html">Início</a>
+          <a class="ativo" href="curriculo.html" aria-current="page">Criar Currículo</a>
+          <a href="vercurriculos.html">Ver Currículos</a>
+          <a href="vagas.html">Ver Vagas</a>
+          <a href="certificados.html">Certificados</a>
+          <a href="quem-somos-nos.html">Quem Somos Nós</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="dicas">
+        <h2>💡 Dicas para um bom currículo</h2>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Revise seu currículo</h3>
+            <p>
+              Leia tudo antes de enviar para evitar erros de português.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Use um e-mail profissional</h3>
+            <p>
+              Prefira um endereço com seu nome e sobrenome.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Inclua cursos</h3>
+            <p>
+              Cursos mostram interesse em aprender e desenvolver novas habilidades.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="curriculo">
+        <h1>Crie seu currículo</h1>
+
+        <form action="https://formspree.io/f/CODIGO" method="POST">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome_completo" placeholder="Digite seu nome completo" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+          <label for="linkedin">LinkedIn</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/seu-perfil">
+
+          <label for="github">GitHub</label>
+          <input type="url" id="github" name="github" placeholder="https://github.com/seu-usuario">
+
+          <label for="curso">Curso</label>
+          <input type="text" id="curso" name="curso" placeholder="Digite o nome do seu curso" required>
+
+          <label for="ano">Ano</label>
+          <input type="text" id="ano" name="ano" placeholder="Exemplo: 2º ano" required>
+
+          <label for="habilidades">Habilidades</label>
+          <textarea id="habilidades" name="habilidades" rows="5" placeholder="Exemplo: comunicação, trabalho em equipe, HTML, CSS..." required></textarea>
+
+          <label for="experiencias">Experiências</label>
+          <textarea id="experiencias" name="experiencias" rows="6" placeholder="Descreva suas experiências profissionais, projetos ou trabalhos escolares."></textarea>
+
+          <label for="objetivo">Objetivo profissional</label>
+          <textarea id="objetivo" name="objetivo_profissional" rows="5" placeholder="Descreva seu objetivo profissional." required></textarea>
+
+          <input type="hidden" name="_subject" value="Novo currículo enviado pelo site">
+
+          <button type="submit" class="botao-criar-curriculo">Salvar currículo</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3>Curriculum CPM</h3>
+          <p>
+            Plataforma desenvolvida para auxiliar alunos na criação de currículos,
+            busca por oportunidades e acesso a cursos gratuitos.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Links</h3>
+          <a href="index.html">Início</a>
+          <a href="curriculo.html">Criar Currículo</a>
+          <a href="vercurriculos.html">Ver Currículos</a>
+          <a href="vagas.html">Vagas</a>
+          <a href="certificados.html">Certificados</a>
+          <a href="quem-somos-nos.html">Quem Somos Nós</a>
+        </div>
+
+        <div class="footer-contato">
+          <h3>Contato</h3>
+          <p>📧 eptcurriculos@gmail.com</p>
+          <p>📍 3º CPM</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <p class="copyright">
+        © 2026 Curriculum CPM - Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+      <span class="theme-icon" aria-hidden="true">☀️</span>
+      <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+    </button>
+    <button class="chatbot" type="button" aria-label="Abrir chat de atendimento"></button>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

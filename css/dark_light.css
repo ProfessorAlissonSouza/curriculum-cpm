@@ -1,0 +1,25 @@
+/* Estilos da página auxiliar que explica a troca de tema. */
+
+/* Inclui bordas e preenchimentos no tamanho calculado dos elementos. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outif', sans-serif;
+}
+
+/* Centraliza o conteúdo na tela com Flexbox e aplica fundo escuro e transição suave. */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #212121;
+  transition: .5s;
+}
+
+/* Deixa o título branco para aparecer sobre o fundo escuro. */
+h1 {
+  color: white;
+}
+

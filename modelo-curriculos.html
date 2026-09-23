@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Vitrine de currículos de estudantes do projeto."
+  >
+  <title>Curriculum CPM</title>
+
+  <link rel="stylesheet" href="css/modelo-curriculos.css">
+  <link rel="stylesheet" href="css/site-chrome.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+
+<body class="pagina-complementar">
+  <header class="site-chrome">
+    <nav aria-label="Navegação principal">
+      <a class="logo" href="index.html">
+        <img src="logo3cpm.png" alt="Logo do 3º CPM">
+        <span>Curriculum CPM</span>
+      </a>
+      <div class="menu">
+        <a href="index.html">Início</a>
+        <a href="curriculo.html">Criar Currículo</a>
+        <a class="ativo" href="vercurriculos.html" aria-current="page">Ver Currículos</a>
+        <a href="vagas.html">Ver Vagas</a>
+        <a href="certificados.html">Certificados</a>
+        <a href="quem-somos-nos.html">Quem Somos Nós</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-panel">
+          <div class="hero-content">
+            <p class="eyebrow">Portfólio de estudantes</p>
+            <h1>Conheça talentos em formação.</h1>
+            <p class="hero-description">
+              Explore os currículos, projetos, competências e experiências dos estudantes
+              participantes desta iniciativa.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#curriculos">
+                Ver currículos
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 16.5 5.5 10l1.4-1.4 5.1 5.1 5.1-5.1 1.4 1.4-6.5 6.5Z"/>
+                </svg>
+              </a>
+
+              <a class="button button-secondary" href="#sobre-projeto">
+                Sobre o projeto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="curriculos" class="students-section" aria-labelledby="titulo-curriculos">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-heading-copy">
+            <p class="section-kicker">Nossos estudantes</p>
+            <h2 id="titulo-curriculos">Escolha um currículo para visualizar</h2>
+            <p class="section-description">
+              Os cartões abaixo são gerados automaticamente com os dados do arquivo
+              <code>data/alunos-dados.json</code>.
+            </p>
+          </div>
+
+          <div class="carousel-actions" aria-label="Controles do carrossel">
+            <button
+              id="btn-anterior"
+              class="carousel-button"
+              type="button"
+              aria-label="Mostrar currículos anteriores"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m14.7 6.3-1.4-1.4L6.2 12l7.1 7.1 1.4-1.4L9 12l5.7-5.7Z"/>
+              </svg>
+            </button>
+
+            <button
+              id="btn-proximo"
+              class="carousel-button"
+              type="button"
+              aria-label="Mostrar próximos currículos"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9.3 17.7 1.4 1.4 7.1-7.1-7.1-7.1-1.4 1.4L15 12l-5.7 5.7Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-box" for="busca-aluno">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 19.6-5.2-5.2a7.5 7.5 0 1 0-1.4 1.4l5.2 5.2 1.4-1.4ZM4 10a6 6 0 1 1 12 0 6 6 0 0 1-12 0Z"/>
+            </svg>
+            <input
+              id="busca-aluno"
+              aria-label="Buscar por nome, turma ou área"
+              type="search"
+              placeholder="Buscar por nome, turma ou área..."
+              autocomplete="off"
+            >
+          </label>
+
+          <p id="status-resultados" class="results-status" aria-live="polite">
+            Carregando currículos...
+          </p>
+        </div>
+
+        <div class="carousel">
+          <div
+            id="lista-alunos"
+            class="carousel-track"
+            aria-label="Lista de currículos"
+            tabindex="0"
+          ></div>
+        </div>
+
+        <div id="mensagem-vazia" class="message" role="status">
+          <strong>Nenhum estudante encontrado.</strong>
+          Tente pesquisar usando outro nome, turma ou área de interesse.
+        </div>
+
+        <p id="aviso-dados" class="data-warning">
+          O arquivo <strong>data/alunos-dados.json</strong> não pôde ser carregado.
+          Dados de demonstração foram exibidos. Para testar o JSON, abra o projeto
+          com o Live Server do VS Code.
+        </p>
+      </div>
+    </section>
+
+    <section id="sobre-projeto" class="students-section" aria-labelledby="titulo-projeto">
+      <div class="container">
+        <div class="section-heading-copy">
+          <p class="section-kicker">Sobre a iniciativa</p>
+          <h2 id="titulo-projeto">Um espaço para apresentar competências e trajetórias</h2>
+          <p class="section-description">
+            Esta página funciona como uma vitrine. Ao selecionar um estudante,
+            o visitante é encaminhado para um único modelo de currículo, preenchido
+            dinamicamente de acordo com o identificador presente na URL.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer-standard">
+    <div class="footer-container">
+      <div><h3>Curriculum CPM</h3><p>Plataforma para criação de currículos, oportunidades e cursos gratuitos.</p></div>
+      <div class="footer-links"><h3>Links</h3><a href="index.html">Início</a><a href="curriculo.html">Criar Currículo</a><a href="vercurriculos.html">Ver Currículos</a><a href="vagas.html">Vagas</a><a href="quem-somos-nos.html">Quem Somos Nós</a></div>
+      <div><h3>Contato</h3><p>📧 eptcurriculos@gmail.com</p><p>📍 3º CPM</p></div>
+    </div>
+    <hr><p class="copyright">© 2026 Curriculum CPM - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/modelo-curriculos.js"></script>
+  <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+    <span class="theme-icon" aria-hidden="true">☀️</span>
+    <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+    <span class="theme-icon" aria-hidden="true">🌙</span>
+  </button>
+  <button class="chatbot" type="button" aria-label="Abrir chat de atendimento"></button>
+  <script src="js/chatbot.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
